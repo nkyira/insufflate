@@ -28,7 +28,7 @@ $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -rf $(OBJ_DIR) out.txt temp.ppm
 	make -C $(GNL_DIR) clean
 
 fclean: clean

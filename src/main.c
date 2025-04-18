@@ -10,7 +10,7 @@ int resize_image(int origin_w, int origin_h)
 	if (origin_w / F_WIDTH > origin_h / (F_HEIGHT * 2))
 	{
 		new_w = F_WIDTH;
-		new_h = origin_h / ((origin_w / F_WIDTH) * 2);
+		new_h = (float)origin_h / (((float)origin_w / F_WIDTH) * 2);
 	}
 	else
 	{
@@ -67,6 +67,8 @@ int main(int argc, char **argv)
 		return 1;
 	printf("skip = %d\n", data->skip);
 	pixel_to_ascii(data, path);
+	make_ascii_image(data);
+	free(data->frame);
 	free(data);
 	return 0;
 }

@@ -55,7 +55,6 @@ int pixel_to_ascii(t_frame_data *data, char *path)
 		}
 	}
 	printf("%s", data->frame);
-	free(data->frame);
 	free(pixel_buff);
 	return 0;
 }

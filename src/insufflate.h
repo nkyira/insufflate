@@ -25,5 +25,6 @@ typedef struct	s_frame_data
 int	get_size(int imfd, int *w, int *h);
 int	setup(char *path, t_frame_data **data);
 int	pixel_to_ascii(t_frame_data *data, char *path);
+int	make_ascii_image(t_frame_data *data);
 
 #endif
