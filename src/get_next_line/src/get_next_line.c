@@ -97,7 +97,10 @@ char	*get_next_line(int fd)
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
+	{
+		reset_str(str_lft);
 		return (NULL);
+	}
 	reset_str(str_saved);
 	if (contains_nl(str_lft))
 		return (cut_str_lft(str_lft));

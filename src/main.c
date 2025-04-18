@@ -1,121 +1,69 @@
 #include "insufflate.h"
 
-static int setup(char *path, t_data **data)
+int resize_image(int origin_w, int origin_h)
 {
-	int	imfd;
-	int	skip;
-	char	*line;
-	char	*width;
-	char	*height;
+//	printf("Resizing image...\n");
+	char	cmd[64];
+	float	new_w;
+	float	new_h;
 
-	skip = 0;
-	imfd = open(path, O_RDONLY);
-	if (imfd < 0)
+	if (origin_w / F_WIDTH > origin_h / (F_HEIGHT * 2))
 	{
-		perror(path);
-		return 1;
+		new_w = F_WIDTH;
+		new_h = origin_h / ((origin_w / F_WIDTH) * 2);
 	}
-	line = get_next_line(imfd);
-	if (!line)
-		return 1;
-	skip += strlen(line);
-	free(line);
-	line = get_next_line(imfd);
-	if (!line)
-		return 1;
-	width = strndup(line, strchr(line, ' ') - line);
-	if (!width)
-		return 1;
-	height = line + strlen(width) + 1;
-	height = strndup(height, strchr(height, '\n') - height);
-	if (!height)
-		return 1;
-	*data = malloc(sizeof(t_data));
-	if (!*data)
-		return 1;
-	(*data)->width = atoi(width);
-	(*data)->height = atoi(height);
-	(*data)->frame_len = (*data)->width * (*data)->height * 3;
-	printf("width = %d, height = %d, ", (*data)->width, (*data)->height);
-	free(width);
-	free(height);
-	skip += strlen(line);
-	free(line);
-	line = get_next_line(imfd);
-	if (!line)
+	else
 	{
-		free(*data);
-		return 1;
+		new_h = F_HEIGHT;
+		new_w = (float)origin_w / ((float)origin_h / (F_HEIGHT * 2));
 	}
-	skip += strlen(line);
-	(*data)->skip = skip;
-	free(line);
-	close(imfd);
+	snprintf(cmd, sizeof(cmd), "convert temp.ppm -resize %dx%d\\! temp.ppm", (int)new_w, (int)new_h);
+	system(cmd);
 	return 0;
 }
 
-//1 lseek(skip)
-//2 read(width * height)
-//3 ascii luminosity table
-//4 pixel value to acscii in a char * with \n based on width
-
-static int pixel_to_ascii(t_data *data, char *path)
+int convert_image(char *path)
 {
+	char	cmd[64];
+	int	origin_w;
+	int	origin_h;
 	int	imfd;
-	int	nlcheck;
-	unsigned char	*pixel_buff;
-	char *ascii_table = " .:-=+*#%@";
-	int	luminosity;
-	int	r;
-	int	g;
-	int	b;
 
+//	printf("Converting image to .ppm...\n");
+	snprintf(cmd, sizeof(cmd), "convert %s temp.ppm", path);
+	system(cmd);
 	imfd = open(path, O_RDONLY);
 	if (imfd < 0)
 	{
 		perror(path);
-		return 1;
+		return -1;
 	}
-	lseek(imfd, data->skip, SEEK_SET);
-	pixel_buff = malloc(sizeof(char) * data->frame_len);
-	read(imfd, pixel_buff, data->frame_len);
-	int i = 0;
-
-	// while (i < data->frame_len)
-	// {
-	// 	printf("[%u][%u][%u] ", pixel_buff[i], pixel_buff[i + 1], pixel_buff[i + 2]);
-	// 	i += 3;
-	// }
-
-	nlcheck = 0;
-	while (i < data->frame_len)
+	close(imfd);
+	imfd = open("temp.ppm", O_RDONLY);
+	if (imfd < 0)
 	{
-		r = pixel_buff[i];
-		g = pixel_buff[i + 1];
-		b = pixel_buff[i + 2];
-		luminosity = (299 * r + 587 * g + 114 * b) / (1000 * 26);
-		write(1, &ascii_table[luminosity], 1);
-
-		i += 3;
-		nlcheck++;
-		if (nlcheck % data->width == 0)
-			write(1, "\n", 1);
+		perror(path);
+		return -1;
 	}
-
-	free(pixel_buff);
-	return 0;
+	get_size(imfd, &origin_w, &origin_h);
+//	printf("ow = %d, fw = %d, oh = %d, fw = %d\n", origin_w, F_WIDTH, origin_h, F_HEIGHT);
+	if (origin_w > F_WIDTH || origin_h > F_HEIGHT)
+		resize_image(origin_w, origin_h);
+	close(imfd);
+	return (0);
 }
 
 int main(int argc, char **argv)
 {
-	t_data	*data;
-	char	*path;
+	t_frame_data	*data;
+	char		*path;
 
 	data = NULL;
-	path = argv[1];
+	path = "temp.ppm";
 	if (argc != 2)
 		return 1;
-	if (setup(path, &data))
+	convert_image(argv[1]);
+	if (setup(path , &data))
 		return 1;
 	printf("skip = %d\n", data->skip);
 	pixel_to_ascii(data, path);
