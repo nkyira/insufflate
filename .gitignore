@@ -1,8 +1,8 @@
-todo.txt
+.temp.ppm
 insufflate
 out.txt
 src/get_next_line/libgnl.a
-temp.ppm
+todo.txt
 
 obj/:
 convert_image.o

@@ -4,13 +4,18 @@ int main(int argc, char **argv)
 {
 	t_frame_data	*data;
 	char		*path;
+	pid_t		convert_pid;
+	int		status;
 
 	data = NULL;
-	path = "temp.ppm";
+	path = ".temp.ppm";
 	if (argc != 2)
 		return 1;
-	convert_image(argv[1]);
-	if (setup(path , &data))
+	convert_pid = fork();
+	if (convert_pid == 0)
+		convert_image(argv[1]);
+	waitpid(convert_pid, &status, 0);
+	if (status || setup(path , &data))
 		return 1;
 	printf("skip = %d\n", data->skip);
 	pixel_to_ascii(data, path);

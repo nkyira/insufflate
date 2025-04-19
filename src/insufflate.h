@@ -4,13 +4,15 @@
 #  define F_WIDTH 191
 # endif
 # ifndef F_HEIGHT
-#  define F_HEIGHT 62
+#  define F_HEIGHT 60
 # endif
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <fcntl.h>
+# include <sys/wait.h>
+# include <sys/ioctl.h>
 # include "get_next_line/src/libgnl.h"
 
 typedef struct	s_frame_data
@@ -22,7 +24,7 @@ typedef struct	s_frame_data
 	int	frame_len;
 }	t_frame_data;
 
-int	convert_image(char *path);
+void	convert_image(char *path);
 int	get_size(int imfd, int *w, int *h);
 int	setup(char *path, t_frame_data **data);
 int	pixel_to_ascii(t_frame_data *data, char *path);

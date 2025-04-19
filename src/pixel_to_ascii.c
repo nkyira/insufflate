@@ -54,7 +54,8 @@ int pixel_to_ascii(t_frame_data *data, char *path)
 			nlcheck++;
 		}
 	}
-	printf("\033[31m%s\033[0m", data->frame);
+	printf("\033[2J\033[H"); // Full clear + reset
+	printf("\033[35m%s\033[0m", data->frame);
 	free(pixel_buff);
 	return 0;
 }
