@@ -1,0 +1,16 @@
+todo.txt
+insufflate
+out.txt
+src/get_next_line/libgnl.a
+temp.ppm
+
+obj/:
+convert_image.o
+main.o
+make_ascii_image.o
+pixel_to_ascii.o
+setup.o
+
+src/get_next_line/obj/:
+get_next_line.o
+get_next_line_utils.o

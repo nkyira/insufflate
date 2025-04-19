@@ -22,6 +22,7 @@ typedef struct	s_frame_data
 	int	frame_len;
 }	t_frame_data;
 
+int	convert_image(char *path);
 int	get_size(int imfd, int *w, int *h);
 int	setup(char *path, t_frame_data **data);
 int	pixel_to_ascii(t_frame_data *data, char *path);
