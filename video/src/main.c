@@ -8,14 +8,11 @@ int get_frame(char **frames, char *path)
 
 	frame_data = NULL;
 	convert_pid = fork();
-	get_next_line(-1);
 	if (convert_pid == 0)
 		convert_image(path);
 	waitpid(convert_pid, &status, 0);
-	get_next_line(-1);
 	if (WEXITSTATUS(status) || setup(".temp.ppm" , &frame_data))
 		return 1;
-	get_next_line(-1);
 	pixel_to_ascii(frame_data, ".temp.ppm");
 	*frames = frame_data->frame;
 	free(frame_data);
@@ -50,8 +47,6 @@ int main(int argc, char **argv)
 		printf("%s", frames[i]);
 		printf("FRAME%d\n", i);
 		fflush(stdout);
-		if (!frames[i + 1])
-			i = -1;
 		usleep(41667);
 	}
 	i = -1;

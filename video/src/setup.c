@@ -8,6 +8,7 @@ int get_size(int imfd, int *w, int *h)
 	char	*line;
 
 	skip = 0;
+	get_next_line(-1);
 	line = get_next_line(imfd);
 	if (!line)
 		return -1;
@@ -53,7 +54,6 @@ int setup(char *path, t_frame_data **data)
 		perror(path);
 		return 1;
 	}
-	get_next_line(-1);
 	skip = get_size(imfd, &w, &h);
 	if (skip < 0 || !w || !h)
 	{

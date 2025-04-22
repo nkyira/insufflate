@@ -20,13 +20,6 @@ int main(int argc, char **argv)
 	printf("skip = %d\n", data->skip);
 	pixel_to_ascii(data, path);
 	make_ascii_image(data);
-	while (1)
-	{
-		printf("\033[2J\033[H");
-		printf("%s",data->frame);
-		fflush(stdout);
-		usleep(41667);
-	}
 	free(data->frame);
 	free(data);
 	return 0;

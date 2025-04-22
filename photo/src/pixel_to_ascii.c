@@ -22,6 +22,7 @@ int pixel_to_ascii(t_frame_data *data, char *path)
 	if (!pixel_buff)
 		return 1;
 	read(imfd, pixel_buff, data->frame_len * 3);
+	close(imfd);
 	int i = 0;
 
 	// while (i < data->frame_len)
@@ -30,13 +31,13 @@ int pixel_to_ascii(t_frame_data *data, char *path)
 	// 	i += 3;
 	// }
 
-	data->frame = malloc(data->frame_len + data->width + 1);
+	data->frame = malloc(data->frame_len + data->height + 1);
 	if (!data->frame)
 	{
 		free(pixel_buff);
 		return 1;
 	}
-	data->frame[data->frame_len + data->width] = '\0';
+	data->frame[data->frame_len + data->height] = '\0';
 	nlcheck = 0;
 	while (i < data->frame_len * 3)
 	{
@@ -54,8 +55,8 @@ int pixel_to_ascii(t_frame_data *data, char *path)
 			nlcheck++;
 		}
 	}
-	printf("\033[2J\033[H"); // Full clear + reset
-	printf("\033[35m%s\033[0m", data->frame);
+	printf("\033[2J\033[H");
+	printf("%s", data->frame);
 	free(pixel_buff);
 	return 0;
 }
