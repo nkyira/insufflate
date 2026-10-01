@@ -1,0 +1,63 @@
+..               .         ..                                    .                   ..   ...--...--...-----.-  ....    
+              ..      ...                      ......          ..                   ..   ...-...-..   ....-.-..-......  
+      ..                                  ................    ..                          ..   .    .     .......---...-
+     .                               ................-...........                                        ..  ......-----
+   .                            ......       ...--::::~~:----.......                                    .. .      ......
+ ..                         .....-...           .-:~~:::~+++~::--..--.                                          ...   .-
+..                       ...------...              .--:---~x=x~::-....-..   ..                                 ..     . 
+.                   .....----....-..                   ..-. ~Zx::::-....-...                                       ..  .
+                ......--...--.----..      -+++~.          .. -=+::::-.........                                  ...   ..
+              .....--....----------..     .-~xZ~              .+~::~~:...   ..     ..                         ..    ..  
+ABCDEFGHIJKLMNOPQRST            ...-----. ...-------::--.     .--+=x  :~-...        --:~+~~- ...::---..-   .                          ..   .
+ABCDEFGHIJKLMNOPQRS            ...---.. .-::----------..      .-:~x: .:~......       .-:~+~-...-~++:---. .                              .--
+ABCDEFGHIJKLMNOPQR           ...---.--:~+++~:::::----..       .--:+-  .+...----.     ..-~+~:-..:+xx+~:--                             .--..
+ABCDEFGHIJKLMNOPQ         ..-----:~++xx====x+~::-----...       .-:x:  :+.--.         ..-:~~~-..-~xx+~::-                            ..  .
+ABCDEFGHIJKLMNOP      .-------:+xx===ZZZZZZZx++~::::--...       .:=+  .-++~-.        .--~~++-..-x=xx+~:-. .                           ..
+ABCDEFGHIJKLMNO  ...------:~x=ZZZZZZZZZZZZZ==x+~::::---..        -x=:   +-           .--~+++-.~x===x++:-..                           ..
+ABCDEFGHIJKLMN..-------~+=ZZZZZZZZZZZZZZZZ==x++~:~:----...        ~Z=+: Zx..         --:+++xx==ZZ===x+~--.   ..                   ....
+ABCDEFGHIJKLM------:~x==ZZZZZZZZZZZZZZZ==xxx+++~::--..-...        -xWZZ+-:-.  .    ----++xZZZZZZZZ==xx+~:-...  .                   ..
+ABCDEFGHIJKL----:~====ZZZZZZZZZZZZZZZ===x++~~~~::---.--....        :=Z== .   .. .---.:+=ZZZZZZZZZZZ===x+:-.                      ...
+ABCDEFGHIJK--:+====ZZZZZZZZZZZZZZZZZZ==x++~~~~~:::::--::--.        -==x+    .- .----+=ZZZZZZZZZZZZZZZ=x+~-..                      .
+ABCDEFGHIJ:+====ZZZZZZZZZZZZZZZZZZZZZ=====xx++++~~~~:~~~~:. ..    .:+~:.:-  - .. ~=ZZZZZZZZZZZZZZZZZZ==x+-..                   ...
+ABCDEFGHIxZ==ZZZZZZZZZZZZZZZZZZZZZZZZZZ========xxxxxxxxxx+:....  .:~++--+  .... =ZZZZZZZZZZZZZZZZZZZZZ==+...                    .
+ABCDEFGH==ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=ZZZZZZZZZ===x~:--.-::~::-.. .-.....ZZZZZZZZZZZZZZZZZZZZZZ==+-..                    
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ===x+~:::--:~~++++x+~=ZZZ.-...  .ZZZZZZZZZZZZZZZ==x-...                  
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==xxxxxx====xxxxx++~:~+=ZZZZ===ZWZZZ-. .-: -ZZZZZZZZZZZZZZZZZ==~-..                .
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=xxxxxxxxxx+++++xx=======ZZZZZZZZZZZZZZ--~~:~ZZZZZZZZZZZZZZZZZZZZ==~....               
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=x++x++~~~~~~~~+x==========ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=x:...               
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=x~:-----..:+x=ZZWZZZZ====ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=x-...              
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZx:-.  .-:~~xZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==+...             .
+ZZZZZZZZZZZZZZZZZZZZZZZZZZx:.   .:++xZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==~....            
+ZZZZZZZZZZZZZZZZZZZZZZZZ=+:-   .:+=ZWWZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=~....           
+ZZZZZZZZZZZZZZZZZZZZZZZx:-..    ..-:~x=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx~+++x~-...          
+ZZZZZZZZZZZZZZZZZZZZZx:.              .:~=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=:..--:x~-...         
+ZZZZZZZZZZZZZZZZZZZZ+.                 .-:+=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==========ZZZZZ+:---:~:-...        
+ZZZZZZZZZZZZZZZZZZx:        .            .-~ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ===~~::::~~~=ZZZZx~:--::-..        
+.       ...        ..:~+x~-:+x======xxxx+~-      -:~~=ZZZZZZZZZZZZZZZZZZZZZZZZZZ::....:x=Z~ .~:-.          +ZZZZ=~. ..  
+-.       .:~:-.       -~+x+~:+x=========xx+:-   .-~++ZZZZZZZZZZZZZZZZZZZZZZZZZZZ-..    -x==. .:+~           -=ZZ==+.    
+~-..       -+=x~-      .~xxx~~x=ZZZZ========+-...:~~=ZZZZZZZZZZZZZZZZZZZZZZZZZZZ:-..    .+=~  .+=:         . -==x+~:.   
++~--.        -=Zx:.     -+xx+++ZZZZZZZZZZ====~::.-:+ZZZZZZZZZZZZZZZZZZZZZZZZZ==+~:-.     .~x~  -+~--~      .. .+x+~::.  
+ZZZZZZZZZZZZZZZZZ+.     .-:~~:---.        .-+=ZWZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==~ZZZZ==ZZx~------ .~=ZZZZx~-------       
+ZZZZZZZZZZZZZ==+:.     .:+===xx++~:.       .-~+x=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZxZZZ=x+:-.... ..---..:=ZZZ=+:-----.      
+===xxxxxxxx++~-.     ..-~xx=====xxx+:..      .:~~++=ZZZZZZZZZZZZZZZZZZZZZZZZZZZ==ZZZ=x+:-        .-...~ZZZZx~-..---.    
+-.............     .-:~~:~xx=====xxx+~-.      .-~+++xZZZZZZZZZZZZZZZZZZZZZZZZZZZ+:~x==ZZZ=.         .. -xZZZ=x~. ...    
+                   .:+xx:-~+x=====xxxx+~-.      .:~~~=ZZZZZZZZZZZZZZZZZZZZZZZZZZ~:--:+===Z-  ..       . .~xZZZZ+:  ..   
+++:-..         ~=x~.     -~xxxxZZZZZZZZZZZZZZZx+~~~=ZZZZZZZZZZZZZZZZZZZZZZZZZZZ=+--.      -~+:  -+-:-        .  :+~::-- 
+x+~:-..         .+=+-    .:~xxZZZZZZZZZZZZZZZZZZ=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=x+:--       -:++-  ~+-        ....~+~::--
+=x+~::-. ..       ~x~.   .-:xZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==++~--.       .:+x+-           ..-::++~::-
+Z=x+~~:-....       -~-  ..:~xZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==++:...       -~+x=x~-       ..-:+x+xx~:-
+xZ==x+~:-....       .:  ..:+xZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=xx+~-...        -+xZZZ+:     .-::+=Z=x~-.
+.xWZ==x++:-...       ..  -:+=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=xx++:--..         :x=ZZ~    ..-+x===x~-..
+..~ZZ==xxx+:-...        .:+=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==xxx++::-...         :+=-     .-x=xx+~-.. 
+  .~=Z===xx+~:--.      :+x=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==xxxxx+~~::-...        .       .:+~~-.    
+-. .:xZZ==xx++:---     +x=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==x====xxxxxx+~::-              ..:-.      
++:    -xZZ===x+~:::.  -+x=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==xZZZZZZZ====xxxx~-...         ...       .
+==+~--..~=ZZZZ===xx+~..x=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ======ZZZZZZZZZZZZ====x+:-.....   ..       .  
+ZZ===Z==x+==ZZZZZZZZZ=~=ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=====ZZZZZZZZZZZZZZZZZ=x+~+~-.              .
+ZZZZZZZWWZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ====ZZZZZZZZZZZZZZZZZZZ==x~-.         ....-.
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=ZZZZZZZZZZZZZZZZZZ==x+:-.         ...  .. 
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=+~~:.                   .
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==x~--.                    ..
+                                                                        ZZZZZZZZ
+                                                                        ZZZZZZZZ
+                                                                        ZZZZZZZZ

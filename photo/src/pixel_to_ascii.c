@@ -5,7 +5,8 @@ int pixel_to_ascii(t_frame_data *data, char *path)
 	int		imfd;
 	int		nlcheck;
 	unsigned char	*pixel_buff;
-	char		*ascii_table = " .-:~+x=ZW";
+	// char		*ascii_table = " .-:~+x%#W";
+	char		*ascii_table = " .-:~+x%10";
 	int		luminosity;
 	int		r;
 	int		g;

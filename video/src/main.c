@@ -1,57 +1,35 @@
 #include "insufflate.h"
 
-int get_frame(char **frames, char *path)
+void player(t_data data)
 {
-	t_frame_data	*frame_data;
-	pid_t		convert_pid;
-	int		status;
+	int	i;
 
-	frame_data = NULL;
-	convert_pid = fork();
-	if (convert_pid == 0)
-		convert_image(path);
-	waitpid(convert_pid, &status, 0);
-	if (WEXITSTATUS(status) || setup(".temp.ppm" , &frame_data))
-		return 1;
-	pixel_to_ascii(frame_data, ".temp.ppm");
-	*frames = frame_data->frame;
-	free(frame_data);
-	return 0;
+	write(1, "\033[2J", 4);
+	for(i = 0; i < data.frame_count; i++)
+	{
+		write(1, "\033[H", 3);
+		write(1, data.all_frames[i], strlen(data.all_frames[i]));
+		usleep(41667);
+	}
 }
 
 int main(int argc, char **argv)
 {
-	char	**frames;
-	char	path[64];
-	int	frame_count;
-	int	i;
+	t_data	data;
+	char	frame_path[64];
+	int		i;
 
 	if (argc != 2)
 		return 1;
-	frame_count = atoi(argv[1]);
-	frames = malloc(sizeof(char *) * (frame_count + 1));
-	frames[frame_count] = NULL;
-	i = 0;
-	while (i < frame_count)
+	setup(&data, argv[1]);
+	for(i = 0; i < data.frame_count; i++)
 	{
-		snprintf(path, sizeof(path), "frames/frame_%d.jpeg", i + 1);
-		if (get_frame(&frames[i], path))
-			return 1;
-		i++;
-		printf("FRAME%d\n", i);
+		snprintf(frame_path, sizeof(frame_path), "frames/frame%d.ppm", i + 1);
+		data.all_frames[i] = pixel_to_ascii(&data, frame_path, get_skip(frame_path));
 	}
-	i = -1;
-	while (frames[++i])
-	{
-		printf("\033[2J\033[H"); // Full clear + reset
-		printf("%s", frames[i]);
-		printf("FRAME%d\n", i);
-		fflush(stdout);
-		usleep(41667);
-	}
-	i = -1;
-	while (frames[++i])
-		free(frames[i]);
-	free(frames);
+	player(data);
+	for(i = 0; i < data.frame_count; i++)
+		free(data.all_frames[i]);
+	free(data.all_frames);
 	return 0;
 }
